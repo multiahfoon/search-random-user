@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 
 // import components
 import { CardList } from './components/card-list/CardList';
-
+import { Search } from './components/search/Search';
 import './App.css';
 
 // create class called App which extends from component
@@ -14,7 +14,7 @@ class App extends Component  {
     super()
     this.state = ({
       users: [],
-      search: ''
+      userSearch: ''
     })
   }
 
@@ -24,9 +24,17 @@ class App extends Component  {
     .then(users => this.setState({users: users.results}))
   }
 
+  // needs to be an arrow function or else 'this' key word wont work
+  handleChange = (e) => {
+    // 'this' referrers to the current component app's state
+    return this.setState({userSearch: e.target.value})
+  }
+
   render() {
     return (
-      <div> 
+      <div>
+        {/* need to use 'this' keyword for handleChange function or it is undefined */}
+        <Search handleChange={this.handleChange} />
         <CardList users={this.state.users}/>
       </div>
     )
