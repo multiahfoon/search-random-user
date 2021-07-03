@@ -4,6 +4,6 @@ import React from 'react'
 export const Search = ({handleChange}) => {
   return (
     // add onChange event listener to fire handleChange function
-    <input type="text" onChange={handleChange} />
+    <input type="search" onChange={handleChange} />
   )
 }
