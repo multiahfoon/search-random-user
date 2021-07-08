@@ -15,12 +15,15 @@ const App = () => {
       .catch(err => console.log(err))
   }, [])
 
+
+
   const handleChange = (e) => {
     setSearchUser(e.target.value)
   }
 
   const filter = users.filter(user => {
-    return user.name.first.toLowerCase().includes(searchUser.toLowerCase())
+    // check if user state includes the search query string
+    return (user.name.first, user.name.last).toLowerCase().includes(searchUser.toLowerCase())
   })
 
   return (
