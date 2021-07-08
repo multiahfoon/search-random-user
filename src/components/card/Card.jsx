@@ -1,10 +1,14 @@
 import React from 'react'
 
 export const Card = ({user}) => {
-  const firstName = user.name.first
-  const lastName = user.name.last
+  const {name, picture, location, email} = user
 
   return (
-      <h1>{`Welcome ${firstName} ${lastName}`}</h1>
+    <div>
+      <img src={`${picture.large}`} alt="profile picture" />
+      <h1>{`${name.title} ${name.first} ${name.last}`}</h1>
+      <p>{`${location.city} ${location.state}`}</p>
+      <p>{email}</p>
+    </div>
     )
 } 
