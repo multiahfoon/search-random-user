@@ -7,13 +7,14 @@ import './App.css';
 const App = () => {
   const [users, setUsers] = useState([])
   const [searchUser, setSearchUser] = useState('')
+  const [refresh, setRefresh] = useState(true)
 
   useEffect(() => {
     fetch('https://randomuser.me/api/?results=8')
       .then(response => response.json())
       .then(userData => setUsers(userData.results))
       .catch(err => console.log(err))
-  }, [])
+  }, [refresh])
 
   const handleChange = (e) => {
     setSearchUser(e.target.value)
@@ -25,9 +26,14 @@ const App = () => {
     return (name.first + ' ' + name.last).toLowerCase().includes(searchUser.toLowerCase())
   })
 
+  const handleClick = () => {
+    setRefresh(!refresh)
+  }
+
   return (
     <div className='container'>
       <Search handleChange={handleChange} />
+      <button onClick={handleClick}>Refresh</button>
       <CardList users={filter} />
     </div >
   )
