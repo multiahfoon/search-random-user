@@ -26,7 +26,7 @@ const App = () => {
   })
 
   return (
-    <div>
+    <div className='container'>
       <Search handleChange={handleChange} />
       <CardList users={filter} />
     </div >
