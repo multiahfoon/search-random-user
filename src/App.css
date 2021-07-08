@@ -7,12 +7,12 @@
 }
 
 .container {
-  width: 70%;
-  margin: 0 auto;
-  padding: 50px 0;
+  display: grid;
+  justify-content: center;
+  padding: 1% 0;
 }
 
-.container > button {
+button {
   padding: 10px;
   margin: 10px;
   margin-left: 0;

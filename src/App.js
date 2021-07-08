@@ -21,7 +21,7 @@ const App = () => {
   }
 
   const filter = users.filter(user => {
-    const {name} = user
+    const { name } = user
     // checks if user state includes the search query string made by user
     return (name.first + ' ' + name.last).toLowerCase().includes(searchUser.toLowerCase())
   })
@@ -32,9 +32,11 @@ const App = () => {
 
   return (
     <div className='container'>
-      <Search handleChange={handleChange} />
-      <button onClick={handleClick}>Refresh</button>
-      <CardList users={filter} />
+      <main>
+        <Search handleChange={handleChange} />
+        <button onClick={handleClick}>Refresh</button>
+        <CardList users={filter} />
+      </main>
     </div >
   )
 }
