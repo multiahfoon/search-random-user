@@ -18,3 +18,7 @@ button {
   margin-left: 0;
   text-transform: uppercase;
 }
+
+main {
+  width: 100%;
+}

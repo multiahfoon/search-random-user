@@ -3,3 +3,28 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2%;
 }
+
+@media screen and (max-width: 1490px) {
+  .cardList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+  }
+}   
+
+@media screen and (max-width: 1044px) {
+  .cardList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .cardList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2%;
+  }
+}
