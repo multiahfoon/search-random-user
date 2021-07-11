@@ -31,13 +31,15 @@ const App = () => {
   }
 
   return (
-    <div className='container'>
-      <main>
-        <Search handleChange={handleChange} />
-        <button onClick={handleClick}>Refresh</button>
-        <CardList users={filter} />
-      </main>
-    </div >
+    users.length < 1 ?
+      null
+      : <div className='container'>
+        <main>
+          <Search handleChange={handleChange} />
+          <button onClick={handleClick}>Refresh</button>
+          <CardList users={filter} />
+        </main>
+      </div >
   )
 }
 
