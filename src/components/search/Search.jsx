@@ -4,6 +4,6 @@ import './search.styles.css'
 
 export const Search = ({handleChange}) => {
   return (
-    <input type="search" onChange={handleChange} />
+    <input type="search" placeholder='Search user' onChange={handleChange} />
   )
 }
