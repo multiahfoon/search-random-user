@@ -10,7 +10,7 @@ const App = () => {
   const [refresh, setRefresh] = useState(true)
 
   useEffect(() => {
-    fetch('https://randomuser.me/api/?results=8')
+    fetch('https://randomuser.me/api/?results=20')
       .then(response => response.json())
       .then(userData => setUsers(userData.results))
       .catch(err => console.log(err))
