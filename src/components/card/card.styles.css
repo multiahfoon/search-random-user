@@ -1,5 +1,9 @@
 .card {
-  border: solid black 2px;
+  border: solid #4444440a  1px;
+  -webkit-box-shadow: 5px 5px 50px 50px rgba(0,0,0,0.02); 
+  box-shadow: 5px 5px 50px 50px rgba(0,0,0,0.02);
+  border-radius: 4px;
+  filter: grayscale(1);
   width: 100%;
   display: grid;
   justify-content: center;
