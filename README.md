@@ -1,4 +1,4 @@
-# Search Random User
+# Search User
 -------------------
 
 ## Application MVP:
